@@ -41,7 +41,7 @@ main{
 .copy-div{
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 14px;
 }
 #copy-text{
     font-size: 15px;
@@ -55,11 +55,13 @@ main{
     width: 17.5px;
     height: 20px;
     color: #A4FFAF;
+    cursor: pointer;
 }
 .copy-icon{
     width: 17.5px;
     height: 20px;
     color: #A4FFAF;
+    cursor: pointer;
 }
 .copy-icon:hover{
     color: #FFFFFF;
@@ -121,6 +123,10 @@ main{
     cursor: pointer;
     background-color: #E6E5EA;
 }
+#length-input::-webkit-slider-thumb:active{
+    background-color: #18171F;
+    border: 2px solid #A4FFAF;
+}
 .checks{
     width: 100%;
     display: flex;
@@ -147,6 +153,9 @@ main{
     border: 2px solid #E6E5EA;
     cursor: pointer;
     position: relative;
+}
+.check-input:active{
+    border: 2px solid #A4FFAF;
 }
 .check-input:checked{
     background-color: #A4FFAF;
@@ -253,10 +262,95 @@ main{
 .button:hover{
     border: 2px solid #A4FFAF;
     background-color: #24232C;
+    cursor: pointer;
 }
 .button:hover h1{
     color: #A4FFAF;
 }
 .button:hover #arrow{
     color: #A4FFAF;
+}
+
+@media only screen and (min-width: 600px){
+    body{
+        padding: 30px 0;
+    }
+    main{
+        gap: 24px;
+    }
+    .header-text{
+        font-size: 24px;
+        line-height: 31.68px;
+    }
+    .password-div{
+        height: 80px;
+        padding: 0 32px;
+    }
+    .copy-div{
+        gap: 16px;
+    }
+    #copy-text{
+        font-size: 18px;
+    }
+    .copy-icon1{
+        width: 21px;
+        height: 24px;
+    }
+    .copy-icon{
+        width: 21px;
+        height: 24px;
+    }
+    #password{
+        font-size: 32px;
+        line-height: 42.24px;
+    }
+    .empty-password{
+        font-size: 32px;
+        line-height: 42.24px;
+    }
+    .settings{
+        padding: 24px 32px 32px 32px;
+    }
+    .length-font{
+        font-size: 18px;
+        line-height: 23.76px;
+    }
+    #length{
+        font-size: 32px;
+        line-height: 42.24px;
+    }
+    #length-input{
+        margin-top: 26px;
+    }
+    .checks{
+        gap: 20px;
+    }
+    .check-divs{
+        gap: 24px;
+    }
+    .checks-font{
+        font-size: 18px;
+        line-height: 23.76px;
+    }
+    .strength{
+        height: 72px;
+        padding: 0 32px;
+        margin-bottom: 32px;
+    }
+    .strength-font{
+        font-size: 18px;
+        line-height: 23.76px;
+    }
+    .strength-level{
+        font-size: 24px;
+        line-height: 31.68px;
+    }
+    .button{
+        height: 65px;
+        gap: 24px;
+    }
+    .button h1{
+        font-size: 18px;
+        line-height: 23.76px;
+    }
 }
