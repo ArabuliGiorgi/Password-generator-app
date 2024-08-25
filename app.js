@@ -21,6 +21,7 @@ copy.addEventListener('click', () => {
     if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(toCopy).then(() => {
             copy_text.display = "block";
+            console.log("copy success");
         }).catch((err) => {
             console.log("Copy error: ", err);
         });
