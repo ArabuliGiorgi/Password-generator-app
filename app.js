@@ -20,8 +20,7 @@ copy.addEventListener('click', () => {
         return;
     if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(toCopy).then(() => {
-            copy_text.display = "block";
-            console.log("copy success");
+            copy_text.style.display = "block";
         }).catch((err) => {
             console.log("Copy error: ", err);
         });
