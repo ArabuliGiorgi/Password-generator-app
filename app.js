@@ -152,4 +152,21 @@ button.addEventListener('click', () => {
     }else{
         putLevel(levels[1]);
     }
+
+    controlTextSize();
 });
+
+function controlTextSize(){
+    function changeTextSize(e){
+        console.log('test');
+        if(e.matches && password.textContent.length >= 16){
+            password.style.fontSize = "18px";
+        }else{
+            password.style.fontSize = "24px";
+        }
+    }
+    const mediaQuery = window.matchMedia("(max-width: 450px)");
+    mediaQuery.addListener(changeTextSize);
+    changeTextSize(mediaQuery);
+}
+controlTextSize();
