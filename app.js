@@ -159,10 +159,14 @@ button.addEventListener('click', () => {
 function controlTextSize(){
     function changeTextSize(e){
         console.log('test');
-        if(e.matches && password.textContent.length >= 16){
-            password.style.fontSize = "18px";
+        if(e.matches){
+            if(password.textContent.length >= 16){
+                password.style.fontSize = "18px";
+            }else{
+                password.style.fontSize = "24px";
+            }
         }else{
-            password.style.fontSize = "24px";
+            password.style.fontSize = "32px";
         }
     }
     const mediaQuery = window.matchMedia("(max-width: 450px)");
